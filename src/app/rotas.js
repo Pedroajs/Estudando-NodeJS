@@ -16,7 +16,23 @@ module.exports = (app) =>{
 
     app.get('/livros', (req, resp) => {
     resp.marko(
-        require('../app/views/livros/lista/lista.marko')
+        require('../app/views/livros/lista/lista.marko'),
+        {
+            livros:[
+                {
+                    editora: 'Aleph',
+                    titulo: 'As Cavernas de Aço'
+                },
+                {
+                    editora: 'Aleph',
+                    titulo: 'O Sol Desvelado'
+                },
+                {
+                    editora: 'Aleph',
+                    titulo: 'Os Robôs da Alvorada'
+                }
+            ]
+        }
     )
     })
 }

@@ -5,10 +5,11 @@
     <body>
         <h1>Minha lista</h1>
         <h2>Isaac Asimov</h2>
-        <ul>
-            <li>Cavernas de Aço</li>
-            <li>O Sol desvelado</li>
-            <li>Robôs da Alvorada</li>
-        </ul>
+        <table>
+            <tr for(livro in data.livros)>
+                <td>${livros.editora}</td>
+                <td>${livros.titulo}</td>
+            </tr>
+        </table>
     </body>
-</html>
+</html> 
