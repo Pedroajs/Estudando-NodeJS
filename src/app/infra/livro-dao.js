@@ -15,6 +15,10 @@ class LivroDao{
             )
         })
     }
+
+    adiciona(){
+        
+    }
 }
 module.exports = LivroDao;
 

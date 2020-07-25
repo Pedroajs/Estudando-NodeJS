@@ -35,7 +35,7 @@ INSERT INTO livros (
     titulo,
     preco,
     descricao
-) SELECT 'As Cavernas de aço', 30.0, 'Trilogia dos robôs' WHERE NOT EXISTS (SELECT * FROM livros WHERE titulo = '')
+) SELECT 'As Cavernas de aço', 30.0, 'Trilogia dos robôs' WHERE NOT EXISTS (SELECT * FROM livros WHERE titulo = 'As Cavernas de Aços')
 `;
 
 const INSERIR_LIVRO_2 = 
