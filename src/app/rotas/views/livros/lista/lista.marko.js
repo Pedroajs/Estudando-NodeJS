@@ -29,9 +29,9 @@ function render(input, out, __component, component, state) {
     var keyscope__8 = "[" + ((for__7++) + "]");
 
     out.w("<tr><td>" +
-      marko_escapeXml(livro.editora) +
-      "</td><td>" +
       marko_escapeXml(livro.titulo) +
+      "</td><td>" +
+      marko_escapeXml(livro.descricao) +
       "</td></tr>");
   });
 

@@ -35,7 +35,7 @@ INSERT INTO livros (
     titulo,
     preco,
     descricao
-) SELECT 'As Cavernas de aço', 30.0, 'Trilogia dos robôs' WHERE NOT EXISTS (SELECT * FROM livros WHERE titulo = 'As Cavernas de Aços')
+) SELECT '', 30.0, '' WHERE NOT EXISTS (SELECT * FROM livros WHERE titulo = '')
 `;
 
 const INSERIR_LIVRO_2 = 
@@ -44,7 +44,7 @@ INSERT INTO livros (
     titulo, 
     preco,
     descricao
-) SELECT 'O Sol Desvelado', 40.0, 'Trilogia dos robôs' WHERE NOT EXISTS (SELECT * FROM livros WHERE titulo = 'O Sol Desvelado')
+) SELECT '', 40.0, '' WHERE NOT EXISTS (SELECT * FROM livros WHERE titulo = '')
 `;
 
 bd.serialize(() => {

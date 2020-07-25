@@ -16,8 +16,28 @@ class LivroDao{
         })
     }
 
-    adiciona(){
-        
+    adiciona(livro){
+        return new Promise((resolve, reject) => {
+            this._db.run(
+                `
+                INSERT INTO LIVROS(
+                    titulo, 
+                    preco,
+                    descricao
+                ) valus(?, ?, ?)
+                `,
+                [
+                    livro.titulo,
+                    livro.preco,
+                    livro.descricao
+                ],
+                erro =>{
+                    if (erro) return reject('Não foi possível adicionar livro');
+                    
+                    resolve();
+                }  
+            )
+        })
     }
 }
 module.exports = LivroDao;
